@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
-mongoose.connect("mongodb+srv://tejalk:tejaldeepsi@cluster0.dewq8qx.mongodb.net/newDB");
+mongoose.connect("mongodb+srv://admin:qgZJm6aWS7DAWBre@cluster0.scmvtju.mongodb.net/?retryWrites=true&w=majority");
 // const items = ["Buy Food", "Cook Food", "Eat Food"
 
 const itemsSchema = {
@@ -140,6 +140,6 @@ app.get("/:customListName",function(req,res){
 });
 
 
-app.listen(process.env.PORT || 3000, function() {
+app.listen(process.env.PORT || 3001, function() {
   console.log("Server started successfully");
 });
